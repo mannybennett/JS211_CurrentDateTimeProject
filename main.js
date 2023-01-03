@@ -15,12 +15,17 @@ const displayDate = () => {
  
 
 // Write a JavaScript program to convert a number to a string.
-
+const numberToString = () => {
+    const num = document.getElementById('text').value 
+    let conversion = num.toString()
+    document.getElementById("string").innerHTML = conversion
+}
 
 
 // Write a JavaScript program to convert a string to the number.
-
-
+const stringToNumber = (string) => {
+    return parseInt(string);
+}
 
 // Write a JavaScript program that takes in different datatypes and prints out whether they are a:
   // * Boolean
@@ -29,22 +34,53 @@ const displayDate = () => {
   // * Number
   // * NaN
   // * String
-  
+const dataType = (data) => {
+    if (data === 'true' || data === 'false') {
+      return 'Boolean'
+    }
+    if (data === 'Null') {
+      return 'Null'
+    }
+    if (data === 'Undefined') {
+      return 'Undefined'
+    }
+    if (isNaN(data)) {
+      return 'NaN'
+    } else {
+      return 'Number'
+    }
+}
 
   
 // Write a JavaScript program that adds 2 numbers together.
-
-
+const sum = (num1, num2) => {
+    return num1 + num2
+}
 
 // Write a JavaScript program that runs only when 2 things are true.
-
+const truth = (input1, input2) => {
+    return input1 && input2
+}
 
 
 // Write a JavaScript program that runs when 1 of 2 things are true.
-
+const or = (input1, input2) => {
+  return input1 || input2
+}
 
 
 // Write a JavaScript program that runs when both things are not true.  
+const untrue = (input1, input2) => {
+  return !input1 && !input2
+}
+
+// ***prevents crashing***
+
+const form = document.querySelector("form")
+
+form.addEventListener("submit", e => {
+    e.preventDefault();
+})
 
 // ***************************
 //         PART TWO
