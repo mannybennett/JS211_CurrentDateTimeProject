@@ -34,20 +34,22 @@ const stringToNumber = (string) => {
   // * Number
   // * NaN
   // * String
-const dataType = (data) => {
-    if (data === 'true' || data === 'false') {
-      return 'Boolean'
+const dataType = () => {
+    const dataInput = document.getElementById('dataData').value
+ 
+    if (dataInput === 'true' || dataInput === 'false') {
+      return document.getElementById("whatData").innerHTML = 'Boolean'
     }
-    if (data === 'Null') {
-      return 'Null'
+    if (dataInput === 'Null') {
+      return document.getElementById("whatData").innerHTML = 'Null'
     }
-    if (data === 'Undefined') {
-      return 'Undefined'
+    if (dataInput === 'Undefined') {
+      return document.getElementById("whatData").innerHTML = 'Undefined'
     }
-    if (isNaN(data)) {
-      return 'NaN'
+    if (isNaN(dataInput)) {
+      return document.getElementById("whatData").innerHTML = 'NaN'
     } else {
-      return 'Number'
+      return document.getElementById("whatData").innerHTML = 'Number'
     }
 }
 
@@ -77,7 +79,6 @@ const untrue = (input1, input2) => {
 // ***prevents crashing***
 
 const form = document.querySelector("form")
-
 form.addEventListener("submit", e => {
     e.preventDefault();
 })
@@ -101,3 +102,14 @@ form.addEventListener("submit", e => {
 // Video1: https://player.vimeo.com/video/377147232
 // Video2: https://www.youtube.com/embed/bkvH28PXLWc
 // Video3: https://www.youtube.com/embed/TrGI9Yki-24
+
+
+// const addForm = document.getElementById('add');
+// addForm.addEventListener("submit", e => {
+//   e.preventDefault()
+
+//   const n1 = document.getElementById("number1").value;
+//   const n2 = document.getElementById("number2").value;
+//   const sum = add(stringToNum(n1), stringToNum(n2))
+//   document.getElementById("sum").innerHTML = `The Sum of ${n1} + ${n2} is ${sum}`;
+// })
