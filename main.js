@@ -14,7 +14,7 @@ const displayDate = () => {
 }
  
 
-// Write a JavaScript program to convert a number to a string.
+// Write a JavaScript program to convert a number to a string.    
 const numberToString = () => {
     const num = document.getElementById('text').value 
     let conversion = num.toString()
@@ -23,8 +23,10 @@ const numberToString = () => {
 
 
 // Write a JavaScript program to convert a string to the number.
-const stringToNumber = (string) => {
-    return parseInt(string);
+const stringToNumber = () => {
+  const string = document.getElementById('stringInput').value 
+  let conversion2 = parseInt(string)
+  document.getElementById("number").innerHTML = conversion2
 }
 
 // Write a JavaScript program that takes in different datatypes and prints out whether they are a:
