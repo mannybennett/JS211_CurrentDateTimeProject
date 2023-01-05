@@ -57,25 +57,32 @@ const dataType = () => {
 
   
 // Write a JavaScript program that adds 2 numbers together.
-const sum = (num1, num2) => {
-    return num1 + num2
+const sum = () => {
+    const numInput1 = parseInt(document.getElementById('num1').value)
+    const numInput2 = parseInt(document.getElementById('num2').value)
+    let sumInputs = numInput1 + numInput2
+    return document.getElementById("result").innerHTML = sumInputs
 }
 
 // Write a JavaScript program that runs only when 2 things are true.
-const truth = (input1, input2) => {
-    return input1 && input2
+const bothTrue = () => {
+    const userInput1 = document.getElementById('input1').value
+    const userInput2 = document.getElementById('input2').value
+    document.getElementById("bothTrueDiv").innerHTML = userInput1 && userInput2
 }
-
 
 // Write a JavaScript program that runs when 1 of 2 things are true.
-const or = (input1, input2) => {
-  return input1 || input2
+const oneTrue = () => {
+    const userInput1 = document.getElementById('input1b').value
+    const userInput2 = document.getElementById('input2b').value
+    document.getElementById("oneTrueDiv").innerHTML = userInput1 || userInput2
 }
 
-
 // Write a JavaScript program that runs when both things are not true.  
-const untrue = (input1, input2) => {
-  return !input1 && !input2
+const bothFalse = () => {
+    const userInput1 = document.getElementById('input1c').value
+    const userInput2 = document.getElementById('input2c').value
+    document.getElementById("bothFalseDiv").innerHTML = !userInput1 && !userInput2
 }
 
 // ***prevents crashing***
