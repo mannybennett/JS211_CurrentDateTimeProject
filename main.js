@@ -68,21 +68,31 @@ const sum = () => {
 const bothTrue = () => {
     const userInput1 = document.getElementById('input1').value
     const userInput2 = document.getElementById('input2').value
-    document.getElementById("bothTrueDiv").innerHTML = userInput1 && userInput2
+    if (userInput1 && userInput2) {
+      document.getElementById("bothTrueDiv").innerHTML = `${userInput1} ${userInput2}`
+    }
 }
 
 // Write a JavaScript program that runs when 1 of 2 things are true.
 const oneTrue = () => {
     const userInput1 = document.getElementById('input1b').value
     const userInput2 = document.getElementById('input2b').value
-    document.getElementById("oneTrueDiv").innerHTML = userInput1 || userInput2
+    if (userInput1 || userInput2) {
+      document.getElementById("oneTrueDiv").innerHTML = `${userInput1} ${userInput2}`
+    }
+// Write a JavaScript program that runs ONLY when 1 of 2 things are true.
+    if ((userInput1 && !userInput2) || (!userInput1 && userInput2)) {
+      
+    }
 }
 
 // Write a JavaScript program that runs when both things are not true.  
 const bothFalse = () => {
     const userInput1 = document.getElementById('input1c').value
     const userInput2 = document.getElementById('input2c').value
-    document.getElementById("bothFalseDiv").innerHTML = !userInput1 && !userInput2
+    if (!userInput1 && !userInput2) {
+      document.getElementById("bothFalseDiv").innerHTML = `nothing was entered`
+    }
 }
 
 // ***prevents crashing***
